@@ -1,0 +1,29 @@
+body {
+    margin: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1, h2 {
+    font-size: xx-large;
+    font-weight: bold;
+    line-height: 60px;
+}
+
+h2 {
+    font-size: x-large;
+    line-height: 40px;
+}
+
+ul {
+    margin-left: 2em;
+}
+
+ul li {
+    margin-left: 0.5em;
+    list-style: disc;
+    line-height: 20px;
+}
+
+p {
+    font-size: large;
+    padding: 0.5em;
+}

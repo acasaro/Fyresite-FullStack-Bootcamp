@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Location Redirect</title>
+</head>
+
+<body>
+
+    <script>
+
+        var eastern = 30, western = -100;
+
+        function getLocation() {
+            // Make sure browser supports this feature
+            if (navigator.geolocation) {
+                // Provide our showPosition() function to getCurrentPosition
+                navigator.geolocation.getCurrentPosition(showPosition);
+            }
+            else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        }
+
+        // This will get called after getCurrentPosition()
+        function showPosition(position) {
+            // Grab coordinates from the given object
+            var lat = position.coords.latitude;
+            var lon = position.coords.longitude;
+            console.log("Your coordinates are Latitude: " + lat + " Longitude " + lon);
+
+            // Call our next function, passing on the coordinates
+            window.location.assign(redirect(lat, lon));
+        }
+
+        function redirect(lat, lon) {
+            return (lat >= eastern && lon <= western) ? "western.html" : "eastern.html";
+        }
+
+        var OS = navigator.userAgent.substring(
+            (navigator.userAgent.indexOf("(") + 1),
+            navigator.userAgent.indexOf(";"));
+
+        if (OS) {
+            alert("Welcome, " + OS + " user!");
+            getLocation();
+        } else {
+            alert("I don't know what you're using...");
+        }
+
+    </script>
+
+</body>
+
+</html>

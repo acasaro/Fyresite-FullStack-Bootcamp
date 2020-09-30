@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript Object Review</title>
+</head>
+
+<body>
+
+  <script type="text/javascript">
+    var customer = {
+      firstName: "John",
+      lastName: "Smith",
+      age: 25,
+      address: {
+        streetAddress: "21 2nd Street",
+        city: "New York",
+        state: "NY",
+        postalCode: "10021"
+      },
+      phoneNumber: [
+        {
+          type: "home",
+          number: "212 555-1234"
+        },
+        {
+          type: "fax",
+          number: "646 555-4567"
+        }
+      ],
+      log: function (key, value) {
+        console.log(key + ': ' + value);
+      },
+      contact: function () {
+        for (var k in this) {
+          switch (typeof this[k]) {
+            case 'function':
+              break;
+            case 'string':
+              this.log(k, this[k]);
+              break;
+            case 'object':
+              for (var j in this[k]) {
+                this.log(j, this[k][j]);
+                // how would we look through the inner array here?
+                // how can we better determine this is actually an Array (not a generic 'object')
+                if (this[k][j].length > 0) {
+
+                }
+              }
+              break;
+          }
+        }
+      }
+    };
+
+    console.log(customer);
+    console.log(customer.contact());
+    /*
+    // Step 1: Log the First Name below using console.log
+
+    */
