@@ -2,7 +2,7 @@
 
 Reverse engineer the starter code provided and create a tutorial for the code.
 
-In the `Develop` folder, there is starter code for a project. Begin inspecting the code to get an understanding of each file's responsibility. Then, in a Google Doc, write a tutorial explaining *every* file and its purpose. If one file is dependant on other files, be sure to let the user know.
+In the `Develop` folder, there is starter code for a project. Begin inspecting the code to get an understanding of each file's responsibility. Then, in a Google Doc, write a tutorial explaining _every_ file and its purpose. If one file is dependant on other files, be sure to let the user know.
 
 At the end of the tutorial, add instructions for how you could now add changes to this project.
 
@@ -27,15 +27,15 @@ GIVEN a Node.js application using Sequelize and Passport
 WHEN I follow the walkthrough
 THEN I understand the codebase
 ```
-- - -
+
+---
 
 ## Submission on BCS
 
 You are required to submit the following:
 
-* A link to a Google Doc or video explaining the application in `Develop/`. 
+- A link to a Google Doc or video explaining the application in `Develop/`.
 
 _Note: Don't forget to change the sharing settings on your Google Doc._
 
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+---
